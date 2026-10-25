@@ -1,6 +1,6 @@
 # defense-level
 
-`defense-level` is a lightweight skill for bounding defensive design, implementation, testing, and review to the defense level a repository actually requires.
+Use `defense-level` when a repository needs to bound required defensive design, implementation, testing, and review by declared defense levels.
 
 It uses two independent axes:
 
@@ -31,7 +31,7 @@ Each axis uses levels `0` through `3`.
 
 Higher levels include the lower levels on the same axis.
 The two axes are independent, so combinations such as `environment=0, interaction=3` and `environment=3, interaction=0` are valid.
-At level `1` or higher, a specified defense is required even when its case ordinarily belongs to level `2` or `3`. Level `1` requires the named cases, while levels `2` and `3` also cover their respective broader categories.
+At level `1` or higher, a specified defense is required even when its case ordinarily belongs to level `2` or `3`. Level `1` covers named cases; levels `2` and `3` add category-wide coverage.
 
 ## Repository configuration
 
@@ -43,8 +43,10 @@ For interaction, defend against duplicate submissions.
 ```
 
 The declared levels apply to design, implementation, testing, and review.
-Missing defenses are required when they fall within the declared levels, including explicitly specified defenses at level `1` or higher. If a defense is explicitly required while its axis is at level `0`, identify the mismatch and update the declared level explicitly.
+Missing defenses are required when they fall within the declared levels, including explicitly specified defenses at level `1` or higher. If a defense is explicitly required while its axis is at level `0`, identify the mismatch so the repository or task can explicitly raise that axis to at least level `1`.
 Existing broader defenses may remain.
+
+For existing configurations, level `0` retains its meaning. To retain previous defense coverage, migrate previous level `1` to `2` and previous level `2` to `3` on each axis.
 
 For new implementations, starting from `environment=0, interaction=0` and raising each axis as requirements appear is recommended.
 
