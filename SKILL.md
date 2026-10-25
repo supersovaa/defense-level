@@ -65,7 +65,7 @@ The key boundary is:
 
 Apply the declared levels consistently to design, implementation, testing, and review.
 
-At level `1` or higher, guarantee defenses explicitly required by the repository or task for the relevant axis. Apply each specified defense even when its case would ordinarily fall under a higher level. A specified case adds a targeted requirement; its broader failure category becomes required at level `2` or `3`.
+At level `1` or higher, guarantee defenses explicitly required by the repository or task for the relevant axis. Apply each specified defense even when its case would ordinarily fall under a higher level. Treat each specified case as a targeted requirement; levels `2` and `3` provide category-wide coverage.
 
 Design behavior for cases covered by the declared levels.
 Implement handling required by those cases.
@@ -79,7 +79,7 @@ The declared levels alone are not a reason to remove working defensive behavior.
 
 Keep the declared levels stable during a task.
 A level change comes from the repository or task requirements rather than from this skill itself.
-When an explicit defense requirement exceeds level `0`, identify the mismatch so the relevant axis can be set to at least level `1`. When a requirement exceeds the otherwise declared coverage, apply the specified-case rule at level `1` or higher.
+When a defense is explicitly required while its axis is declared at level `0`, identify the mismatch so the repository or task can explicitly raise that axis to at least level `1`.
 
 ## Recommended adoption
 
