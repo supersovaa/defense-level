@@ -1,11 +1,11 @@
 ---
 name: defense-level
-description: Bound defensive design, implementation, testing, and review to repository-declared environment and interaction defense levels.
+description: Use the repository’s declared environment and interaction defense levels to scope defensive design, implementation, testing, and review.
 ---
 
 # Defense Level
 
-Use this skill to keep defensive work aligned with the level a repository actually requires.
+Scope defensive work along two independent axes: the environment in which the system runs and the interactions it must handle.
 
 ## Configuration
 
