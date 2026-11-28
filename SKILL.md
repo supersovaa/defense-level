@@ -1,11 +1,11 @@
 ---
 name: defense-level
-description: Use the repository’s declared environment and interaction defense levels to scope defensive design, implementation, testing, and review.
+description: Use in design, implementation, testing, or review to scope defensive behavior under the repository’s defense policy.
 ---
 
 # Defense Level
 
-Scope defensive work along two independent axes: the environment in which the system runs and the interactions it must handle.
+When considering a defensive measure, identify its axis and use the declared level for the environment or the interaction. Obtain missing levels as specified below before deciding which cases the work must cover.
 
 ## Configuration
 
